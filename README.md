@@ -1,6 +1,6 @@
 # YouTube Japanese Only
 
-Small Chrome extension that hides (dims and marks) YouTube videos whose titles do not contain Japanese characters.
+Small Chrome extension that hides YouTube videos whose titles do not contain Japanese characters.
 
 ## What it does
 
