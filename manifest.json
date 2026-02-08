@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Japanese Only",
+  "version": "1.0",
+  "description": "Hide non-Japanese videos on YouTube",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+  ,
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "YouTube Japanese Only",
+    "default_popup": "popup.html"
+  }
+}
