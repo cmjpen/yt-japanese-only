@@ -51,7 +51,7 @@ This extension does not send any data to external servers. It only reads titles 
 
 ## Development notes
 
-- The title-language detection is a simple regex that looks for Japanese character ranges. It is not perfect (for example, romanized Japanese or mixed-language titles will be hidden). You can modify `content.js` to alter the detection logic or styling. Google translated titles will still show.
+- The title-language detection is a simple regex that looks for Japanese character ranges. It is not perfect (for example, romanized Japanese will be hidden and Google translated titles will still show). You can modify `content.js` to alter the detection logic or styling.
 Also, the non-Japanese videos are hidden, but thumbnails can still play the video if you
 hover your mouse over it.
 
