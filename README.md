@@ -5,7 +5,7 @@ Small Chrome extension that hides YouTube videos whose titles do not contain Jap
 ## What it does
 
 - Scans video titles on YouTube pages and checks whether the title contains Japanese characters (Hiragana, Katakana, Kanji).
-- If a title appears to be non-Japanese, the extension visually de-emphasises the video by reducing opacity and adding a red dashed border so you can quickly spot and ignore non-Japanese content.
+- If a title appears to be non-Japanese, the extension visually hides the video by reducing opacity (to zero by default).
 - The extension runs as a content script on all youtube.com pages and updates dynamically as the page changes.
 
 The extension does all processing locally in your browser; it uses chrome.storage.sync only to save your settings (enabled state and opacity preference).
@@ -51,9 +51,9 @@ This extension does not send any data to external servers. It only reads titles 
 
 ## Development notes
 
-- The title-language detection is a simple regex that looks for Japanese character ranges. It may not be perfect (for example, romanized Japanese or mixed-language titles). You can modify `content.js` to alter the detection logic or styling. Google translated titles will still show.
-Also, the non-Japanese videos are hidden but thumbnails can still play on the thumbnails if you
-hover your mouse over the blank spot where the video is.
+- The title-language detection is a simple regex that looks for Japanese character ranges. It is not perfect (for example, romanized Japanese or mixed-language titles will be hidden). You can modify `content.js` to alter the detection logic or styling. Google translated titles will still show.
+Also, the non-Japanese videos are hidden, but thumbnails can still play the video if you
+hover your mouse over it.
 
 ## License
 
